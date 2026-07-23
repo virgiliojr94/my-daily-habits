@@ -10,10 +10,31 @@ o navegador guarda tudo. Isso é de propósito — deploy estático no GitHub Pa
 
 ---
 
+## Pré-requisitos (instalar uma vez, antes da Aula 2)
+
+Você só precisa do **Node.js 20** (LTS) — o **npm já vem junto**. O **Vite** e o **React**
+são dependências do projeto: não instale à parte, o `npm install` puxa tudo na versão certa
+(travada no `package-lock.json`).
+
+```bash
+# Instale o Node 20 (LTS). No WSL/Ubuntu, via nvm (recomendado):
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+# reabra o terminal, depois:
+nvm install 20
+nvm use 20
+
+# confira as versões (esperado: node v20.x, npm 10.x)
+node -v
+npm -v
+```
+
+> Alternativa sem nvm: baixe o instalador do Node 20 LTS em https://nodejs.org (traz o npm).
+> Use o **20** porque é a versão do CI e do Docker — assim "roda igual" em todo lugar.
+
 ## Rodar local (Aula 2 em diante)
 
 ```bash
-npm install      # instala as dependências (uma vez)
+npm install      # instala as dependências (Vite, React etc) na versão do package-lock — uma vez
 npm run dev      # sobe em http://localhost:5173
 npm test         # roda os testes (é o que o CI vai checar)
 npm run build    # gera os estáticos em dist/
