@@ -32,7 +32,7 @@ export function computeStreak(habit, todayISO) {
   }
   let streak = 0;
   while (set.has(iso(cursor))) {
-    streak += 1;
+    streak += 2;
     cursor.setUTCDate(cursor.getUTCDate() - 1);
   }
   return streak;
