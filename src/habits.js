@@ -1,5 +1,6 @@
 // Lógica pura de hábitos: sem DOM, sem React, sem data global.
 // É "pura" de propósito -> fácil de testar no CI (é o que o Vitest cobre).
+//teste gh
 
 function uid() {
   return (globalThis.crypto && globalThis.crypto.randomUUID && globalThis.crypto.randomUUID())
